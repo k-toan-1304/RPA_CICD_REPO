@@ -157,8 +157,8 @@ LO_16 Verify the go back button when click on "Quay trở lại đăng nhập" b
   Then Webpage should contain "Mật khẩu" input field
   Then Webpage should contain "Quên mật khẩu?" button
 
-LO_17 Verify the go back button when click on "Quay trở lại đăng nhập" button in confirming OTP page
-  [Tags]                                                                                                ForgotPassword                 GoBack
+# LO_17 Verify the go back button when click on "Quay trở lại đăng nhập" button in confirming OTP page
+#   [Tags]                                                                                                ForgotPassword                 GoBack
   # When Click "Quên mật khẩu?" button
   # When Enter "email" in "Email khôi phục" with "admin@admin.com"
   # When Click "Lấy Mã OTP" button
