@@ -27,10 +27,11 @@ LO_02 Check the showing password when click on eye icon in "Mật khẩu" field
 ### Verify the log in function when entering the valid data ###
 LO_03 Verify that login successfully when enter the valid data (admin account)
   [Tags]                                                                                                Valid                          Smoketest
-  When Enter "email" in "Tên đăng nhập" with "admin@admin.com"
+  When Enter "email" in "Tên đăng nhập" with "admin_error@admin.com"
   When Enter "text" in "Mật khẩu" with "Password1!"
   When Click "Đăng nhập" button
   Then User look message "Thành công" popup
+  Take Screenshot
 
 ### Verify the log in unsuccessful when entering the invalid data ###
 LO_04 Verify that login with entering the non-existent email
