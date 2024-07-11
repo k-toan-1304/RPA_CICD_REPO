@@ -25,12 +25,12 @@ jobs:
         run: docker-compose -f docker/docker-test.yml run --rm server sh -c "npm run lint"
       - name: Run Test Backend
         run: docker-compose -f docker/docker-test.yml run --rm server sh -c "npm run test:e2e"
-        continue-on-error: true
+        if: ${{ always() }}
       - name: Run Migration && Seed Database
         run: docker-compose -f docker/docker-test.yml run --rm server sh -c "npm run migration && npm run seed"
       - name: Run Test Frontend
         run: docker-compose -f docker/docker-test.yml exec -T server robot -d robot/result robot/testcases/Login.robot
-        continue-on-error: true
+        if: ${{ always() }}
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
